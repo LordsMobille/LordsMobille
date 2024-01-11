@@ -1,0 +1,41 @@
+<section>
+  <div x-data="socialForm" class="container">
+    <form
+      id="social-form"
+      class="w-full relative z-20 max-w-[400px] mx-auto"
+    >
+      <div
+        x-show="isSuccessMessage"
+        x-transition.duration.400ms
+        class="flex bg-lightGrey absolute inset-0 z-20 w-full items-center text-center justify-center md:text-2xl text-xl font-medium text-black"
+      >
+        Thank you! <br>
+        We will contact you back soon!
+      </div>
+
+      <div class="flex flex-col gap-[25px] w-full">
+        <input
+          type="text"
+          name="Name"
+          placeholder="Ваш игровой ник"
+          class="w-full border-2 border-yellow-50 rounded-full py-3 px-4 bg-black/40 outline-none placeholder:text-base placeholder:text-white/70"
+          required
+        />
+        <input
+          type="text"
+          name="State"
+          placeholder="Статы на соль xxx/xxx/xxx"
+          class="w-full border-2 border-yellow-50 rounded-full py-3 px-4 bg-black/40 outline-none placeholder:text-base placeholder:text-white/70"
+          required
+        />
+      </div>
+      <div class="mt-6">
+        <button
+          type="submit"
+          class="w-full border-2 border-yellow-50 rounded-full py-3 px-4 bg-black/40 hover:bg-black duration-300">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
